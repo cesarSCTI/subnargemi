@@ -14,14 +14,13 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-12">
                 <h1>DataTables Example</h1>
-                <table id="example" class="display table-responsive table-sm">
+                <table id="example" class="">
                     <thead>
                         <tr>
-                            <th>Id</th>
                             <th>Numero_CM_CNRG</th>
                             <th>Macrored_subnargemi</th>
                             <th>Tipo_microorganismo</th>
@@ -29,7 +28,6 @@
                             <th>Especie</th>
                             <th>Nombre_depositante</th>
                             <th>Fuente_aislamiento</th>
-                            <th>referencia_aislamiento</th>
                             <th>referencia_asociada</th>
                             <th>caracteristicas_funcionales</th>
                         </tr>
@@ -39,29 +37,5 @@
         </div>
     </div>
 </body>
-<script>
-$(document).ready(function() {
-    $('#example').DataTable({
-        "ajax": {
-            "url": "db.php",
-            "type": "GET",
-            "dataSrc": "data"
-        },
-        "columns": [
-            {"data": "Id" },
-            {"data": "Numero_CM_CNRG" },
-            {"data": "Macrored_subnargemi"},
-            {"data": "Tipo_microorganismo"},
-            {"data": "Genero"},
-            {"data": "Especie"},
-            {"data": "Nombre_depositante"},
-            {"data": "Fuente_aislamiento"},
-            {"data": "referencia_aislamiento"},
-            {"data": "referencia_asociada"},
-            {"data": "caracteristicas_funcionales"}
-        ],
-        responsive: true
-    });
-});
-</script>
+<script type="text/javascript" charset="utf8" src="js/dataTable.js"></script>
 </html>
